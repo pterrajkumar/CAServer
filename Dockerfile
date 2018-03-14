@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 # if you are building your code for production
 # RUN npm install --only=production
-RUN npm Install
+RUN npm install
 #Bundle app source
 COPY . .
 EXPOSE 3000
