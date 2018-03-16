@@ -23,4 +23,14 @@ router.get("/fishes/:id", function(req, res, next){
         res.json(fishes);
     });
 });
+
+router.get("/totalFishes", function(req, res, next){
+    db.collection('Fishes').count(function (err, count) {
+        if (err){
+            res.send(err);
+        }
+        res.json(count);
+    });
+});
+
 module.exports = router;
